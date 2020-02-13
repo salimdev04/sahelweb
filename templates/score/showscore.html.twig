@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <section style="background-color:#b03021;
+    padding: 50px 10px 50px 10px;">
+    <div class="row jumbotron">
+    {% for score in scores %}
+        {{ score.firstTeam}}
+    {% endfor %}
+    
+    
+    </div>
+    
+    </section>
+{% endblock %}

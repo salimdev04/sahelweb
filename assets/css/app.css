@@ -1,0 +1,35 @@
+
+
+body{
+    background-image: url("../images/terrain3.jpg");
+}
+.title {
+    padding:10px 0px 10px 0px;
+    height: 50px;
+    color: brown;
+    border-bottom: 1.5px solid #000000;
+    margin-bottom: 30px;
+
+}
+
+.block-diapo{
+    margin-bottom:30px ;
+}
+
+section{
+    background-image: url("../images/blanche.jpg");
+    padding: 50px 10px 50px 10px;
+}
+
+
+.articles{
+    float: left;
+}
+
+footer{
+    border-top: 2px solid brown;
+    
+    padding: 15px;
+    background-color: #242323;
+    color: whitesmoke;
+}

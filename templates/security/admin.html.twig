@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="images/sahel-logo.jpeg" width="50" height="50" class="d-inline-block align-top" alt="">
+			Sahel Football Club 
+						De Sokode
+		</a>
+
+		<a class="nav-link btn btn-outline-dark float-right" href="{{ path('security_logout')}}">
+			DECONNEXION</a>
+
+	</nav>
+	<section style="background-color:#b03021;
+			    padding: 50px 10px 50px 10px;">
+
+		<div class=" jumbotron ">
+			<div class="title" style=" padding:10px 0px 10px 0px;
+										    height: 50px;
+										    color: brown;
+										    border-bottom: 1.5px solid #000000;
+										    margin-bottom: 30px;">
+				<h2>Administration</h2>
+			</div>
+
+			<div class="alert alert-danger">
+				<p>
+					Etes-vous sur de faire partir des personels de l'Academie Sahel Football. 
+					        Si OUI ? remplisser les informations ci-dessous
+				</p><br>
+				<p>
+					Si NON ? veillez-vous retirez car des sanctions seront prise contre vous</p>
+			</div>
+
+			<div class="row">
+
+				<div class="card border-dark col-sm-6">
+					<div class="card-header">Administrateur</div>
+					<div class="card-body text-dark">
+						<h5 class="card-title">Ajouter un article</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href=" {{ path("blog_create") }} " class="btn btn-outline-dark ">articles</a>
+					</div>
+				</div>
+				
+				<div class="card border-dark col-sm-6">
+					<div class="card-header">Administrateur</div>
+					<div class="card-body text-dark">
+						<h5 class="card-title">Ajouter une match</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href=" {{ path("score") }} " class="btn btn-outline-dark ">Scores</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+{% endblock %}

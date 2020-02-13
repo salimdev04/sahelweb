@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="images/sahel-logo.jpeg" width="50" height="50" class="d-inline-block align-top" alt="">
+			Sahel Football Club 
+						De Sokode
+		</a>
+		<button class="btn btn-outline-dark float-right">
+			<a class="nav-link" href="{{ path('security_logout')}}">DECONNEXION</a>
+		</button>
+	</nav>
+	<section style="background-color:#b03021 ;
+			    padding: 50px 10px 50px 10px;">
+
+		<div class=" jumbotron">
+
+			<div class="title" style=" padding:10px 0px 10px 0px;
+					    height: 50px;
+					    color: brown;
+					    border-bottom: 1.5px solid #000000;
+					    margin-bottom: 30px;">
+				<h2>creer un nouveau article</h2>
+			</div>
+
+			{{ form_start(formArticle) }}
+
+			{{ form_row(formArticle.title, {'attr' :{'placeholder' : 'titre'}}
+			) }}
+			{{ form_row(formArticle.content, {'attr' : {'placeholder' : 'Description...'}}) }}
+			{{ form_row(formArticle.image, {'attr' : {'placeholder' : 'Ajouter image'}}) }}
+
+			<button type="submit" class="btn btn-success">
+				{% if editMode %}
+					editer l'article
+				{% else %}
+					Envoyer l'article
+				{% endif %}
+
+			</button>
+
+			{{ form_end(formArticle) }}
+
+		</div>
+
+
+	</section>
+
+{% endblock %}
